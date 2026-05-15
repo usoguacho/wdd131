@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #0a3d62;
+    --secondary-color: #1565a0;
+    --accent-color: #e67e22;
+    --light-color: #f0f4f8;
+    --dark-color: #1a1a2e;
+    --text-color: #2c3e50;
+    --white-color: #ffffff;
+    --muted-color: #c8b97a;
+    --card-shadow: 0 4px 16px rgba(10, 61, 98, 0.12);
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: "Roboto", sans-serif;
+    --max-width: 900px;
+    --radius: 8px;
+}
+
+/* =====================
+   RESET & BASE
+   ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* =====================
+   HEADER
+   ===================== */
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+    padding: 0.85rem 2rem;
+    background-color: var(--primary-color);
+}
+
+/* =====================
+   NAVIGATION
+   ===================== */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--dark-color);
+    padding: 0 2rem;
+}
+
+header nav a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    display: inline-block;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+header nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+/* =====================
+   MAIN
+   ===================== */
+main {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+main h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+/* =====================
+   CARD GRID
+   ===================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.card {
+    background-color: var(--white-color);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    border: 1px solid #d0d8e4;
+}
+
+.card h2 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 0.65rem 1rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.card-body {
+    padding: 1rem 1.25rem 1.25rem;
+}
+
+/* =====================
+   PROFILE PHOTO (floated)
+   ===================== */
+.profile-photo {
+    float: right;
+    width: 140px;
+    height: auto;
+    margin: 0 0 0.75rem 1rem;
+    border: 1px solid #ccc;
+}
+
+/* =====================
+   LOCATION BLOCK
+   ===================== */
+.card h3 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+    margin: 1.25rem 0 0.25rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #ccc;
+    clear: both;
+}
+
+.location-block {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-top: 0.75rem;
+}
+
+.location-block figure {
+    flex-shrink: 0;
+    width: 120px;
+    text-align: center;
+}
+
+.location-block figure img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.location-block figcaption {
+    font-size: 0.78rem;
+    color: var(--text-color);
+    margin-top: 0.3rem;
+    font-style: italic;
+}
+
+.location-block p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* =====================
+   RESOURCE LIST
+   ===================== */
+.resource-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.resource-list li {
+    margin-bottom: 0.5rem;
+}
+
+.resource-list a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.resource-list a:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.9;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: var(--white-color);
+    margin: 0;
+}
+
+#lastModified {
+    color: var(--muted-color);
+    font-size: 0.82rem;
+}

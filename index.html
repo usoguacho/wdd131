@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Sam Tuala</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals | Sam Tuala | A course portfolio showcasing JavaScript, dynamic web design, and interactive page development.">
+    <meta name="author" content="Sam Tuala">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
+
 <body>
-    <h1>Hello, World!</h1>
+
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/1?lang=eng&id=p1#p1" target="_blank">Scripture</a>
+            <a href="final-project/index.html">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Sam Tuala</h1>
+
+        <div class="card-grid">
+
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-body">
+                    <img src="images/profile.jpg" alt="Sam Tuala profile photo" class="profile-photo">
+                    <p>Hi, I'm Sam Tuala. I'm passionate about software development. This page is to
+                        help me showcase my work and learn more about web development.</p>
+
+                    <h3>Las Vegas, Nevada</h3>
+                    <div class="location-block">
+                        <figure>
+                            <img src="images/nv-flag.jpg" alt="Official Flag of Nevada">
+                            <figcaption>Official Flag of Nevada</figcaption>
+                        </figure>
+                        <p>Nevada is the 7th largest state in the United States, located in the western
+                            region. It is known for its desert landscape, entertainment capital Las Vegas,
+                            and its rich mining history. Nevada is also home to the famous Area 51 and
+                            the Hoover Dam.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="card-body">
+                    <ul class="resource-list">
+                        <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                        <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                        <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+                        <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+                        <li><a href="https://picsum.photos" target="_blank">Lorem Picsum Image Placeholder</a></li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+    <p>&copy; <span id="currentyear"></span> Sam Tuala &nbsp;|&nbsp; NV, USA</p>
+    <p id="lastModified"></p>
+</footer>
+
 </body>
 </html>

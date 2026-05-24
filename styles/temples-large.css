@@ -1,0 +1,42 @@
+/* LARGE SCREEN STYLES */
+@media (min-width: 640px) {
+
+    /* Hide hamburger on large screens */
+    #hamburger-btn {
+        display: none;
+    }
+
+    /* Always show nav on large screens */
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 0.25rem;
+        background-color: transparent;
+    }
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        padding: 0 1.5rem;
+    }
+
+    header p {
+        padding: 0.85rem 0;
+    }
+
+    nav {
+        justify-content: flex-end;
+        gap: 0.25rem;
+        background-color: transparent;
+    }
+
+    nav a {
+        padding: 0.85rem 1rem;
+    }
+}

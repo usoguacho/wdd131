@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #003087;
+    --secondary-color: #74ACDF;
+    --accent-color: #F6B40E;
+    --light-color: #EAF4FB;
+    --dark-color: #001a4d;
+    --text-color: #1a1a2e;
+    --white-color: #ffffff;
+    --muted-color: #c8b97a;
+    --border-color: #b0cfe8;
+    --shadow: 0 2px 10px rgba(0, 48, 135, 0.12);
+    --font-heading: 'Merriweather', Georgia, serif;
+    --font-body: 'Open Sans', Arial, sans-serif;
+    --radius: 6px;
+    --max-width: 1000px;
+}
+
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--light-color);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* HEADER */
+header {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--white-color);
+    letter-spacing: 0.03em;
+}
+
+/* MAIN — MOBILE LAYOUT */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* HERO IMAGE*/
+picture,
+picture img {
+    display: block;
+    width: 100%;
+}
+
+picture img {
+    max-height: 340px;
+    object-fit: cover;
+}
+
+/*  DATA SECTION*/
+.data-section {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    margin: 1.25rem 1rem;
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+.data-section h2,
+.weather-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.data-section table,
+.weather-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-section td,
+.weather-section td {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.95rem;
+}
+
+td.label {
+    font-weight: 600;
+    color: var(--primary-color);
+    width: 45%;
+}
+
+td.value {
+    color: var(--text-color);
+}
+
+/* WEATHER SECTION — MOBILE */
+.weather-section {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    margin: 0 1rem 1.25rem;
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.weather-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    object-fit: contain;
+}
+
+.weather-section table {
+    text-align: left;
+}
+
+/*FOOTER*/
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.9;
+    border-top: 4px solid var(--accent-color);
+}
+
+footer p {
+    color: var(--white-color);
+    margin: 0;
+}
+
+#lastModified {
+    color: var(--muted-color);
+    font-size: 0.8rem;
+}
+
+/* LARGE SCREEN — 640px+*/
+@media (min-width: 640px) {
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Grid: data left | image center | weather right */
+    main {
+        display: grid;
+        grid-template-columns: 220px 1fr 220px;
+        grid-template-rows: auto auto;
+        gap: 0;
+        align-items: start;
+    }
+
+    /* Hero image spans full width in row 1 */
+    picture {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        position: relative;
+    }
+
+    picture img {
+        max-height: 500px;
+    }
+
+    /* Data overlays bottom-left of image area */
+    .data-section {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 1rem;
+        align-self: end;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    /* Weather overlays bottom-right of image area */
+    .weather-section {
+        grid-column: 3;
+        grid-row: 1;
+        margin: 1rem;
+        align-self: end;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.95);
+        text-align: left;
+    }
+
+    /* =====================
+       PSEUDO-ELEMENT: weather icon in large view
+       Replaces the <img> weather icon on desktop
+       ===================== */
+    .weather-section .weather-icon {
+        display: none;
+    }
+
+    .weather-section h2::after {
+        content: '🌤️';
+        font-size: 1.4rem;
+        margin-left: 0.5rem;
+        vertical-align: middle;
+    }
+}

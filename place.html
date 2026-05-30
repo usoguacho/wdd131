@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosario, Argentina</title>
+    <meta name="description"
+        content="Discover Rosario, Argentina — a vibrant city on the Paraná River known for its culture, architecture, and birthplace of Lionel Messi.">
+    <meta name="author" content="Sam Tuala">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Rosario, Argentina</h1>
+    </header>
+
+    <main>
+
+        <picture>
+            <source srcset="images/rosario-large.webp" media="(min-width: 640px)">
+            <img src="images/rosario-small.webp" alt="Panoramic view of Rosario, Argentina" loading="lazy">
+        </picture>
+
+        
+        <section class="data-section">
+            <h2>Data</h2>
+            <table>
+                <tr>
+                    <td class="label">Country:</td>
+                    <td class="value">Argentina</td>
+                </tr>
+                <tr>
+                    <td class="label">Province:</td>
+                    <td class="value">Santa Fe</td>
+                </tr>
+                <tr>
+                    <td class="label">Population:</td>
+                    <td class="value">1.2 million</td>
+                </tr>
+                <tr>
+                    <td class="label">Area:</td>
+                    <td class="value">178.69 km²</td>
+                </tr>
+                <tr>
+                    <td class="label">Language:</td>
+                    <td class="value">Spanish</td>
+                </tr>
+                <tr>
+                    <td class="label">Founded:</td>
+                    <td class="value">1689</td>
+                </tr>
+            </table>
+        </section>
+
+        
+        <section class="weather-section">
+            <h2>Weather</h2>
+            <img src="images/weather-icon.svg" alt="Current weather icon" class="weather-icon">
+            <table>
+                <tr>
+                     <td class="label">Wind Chill:</td>
+                     <td class="value" id="weather-windchill">--</td>
+                </tr>
+              <tr>
+                <td class="label">Condition:</td>
+                <td class="value">Partly Cloudy</td>
+            </tr>
+                <tr>
+                 <td class="label">Temperature:</td>
+                <td class="value">8 °C</td>
+            </tr>
+            <tr>
+                 <td class="label">Humidity:</td>
+                <td class="value">72%</td>
+            </tr>
+            <tr>
+                <td class="label">Wind Speed:</td>
+                <td class="value">20 km/h</td>
+            </tr>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Sam Tuala &nbsp;|&nbsp; NV, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

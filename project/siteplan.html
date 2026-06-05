@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Website planning document for World Cup Pal, a fan hub for the 2026 World Cup with match schedules, team info, and host city guides for the USA, Canada, and Mexico.">
+<meta name="author" content="YOUR FULL NAME HERE">
 <title>Website Planning Document - World Cup Pal</title>
 <link rel="stylesheet" href="styles/wcpal.css">
 </head>
@@ -45,11 +48,11 @@ get reminders before games start. The site is just for information and does not 
     <th>Where it is used</th>
   </tr>
   <tr>
-    <td><span style="font-family: Georgia, serif; font-size:18px;">Georgia</span></td>
+    <td><span class="spec-georgia">Georgia</span></td>
     <td>Used for the main headings and titles.</td>
   </tr>
   <tr>
-    <td><span style="font-family: Arial, sans-serif; font-size:18px;">Arial</span></td>
+    <td><span class="spec-arial">Arial</span></td>
     <td>Used for the paragraphs and body text.</td>
   </tr>
 </table>
@@ -59,17 +62,17 @@ get reminders before games start. The site is just for information and does not 
 second one is the mobile version.</p>
 
 <h3>Desktop View</h3>
-<div class="wireframe" style="width:500px;">
+<div class="wireframe desktop">
   <div class="wf-part">Logo and Navigation Bar</div>
-  <div class="wf-part" style="padding:30px;">Big Picture (Hero Image) + Countdown</div>
-  <div style="display:flex;">
-    <div class="wf-part" style="flex:1;">Match 1</div>
-    <div class="wf-part" style="flex:1;">Match 2</div>
-    <div class="wf-part" style="flex:1;">Match 3</div>
+  <div class="wf-part wf-hero">Big Picture (Hero Image) + Countdown</div>
+  <div class="wf-row">
+    <div class="wf-part col">Match 1</div>
+    <div class="wf-part col">Match 2</div>
+    <div class="wf-part col">Match 3</div>
   </div>
-  <div style="display:flex;">
-    <div class="wf-part" style="flex:2;">News</div>
-    <div class="wf-part" style="flex:1;">Standings</div>
+  <div class="wf-row">
+    <div class="wf-part col-wide">News</div>
+    <div class="wf-part col">Standings</div>
   </div>
   <div class="wf-part">Footer</div>
 </div>
@@ -77,7 +80,7 @@ second one is the mobile version.</p>
 <h3>Mobile View</h3>
 <div class="wireframe mobile">
   <div class="wf-part">Logo + Menu</div>
-  <div class="wf-part" style="padding:25px;">Hero Image</div>
+  <div class="wf-part wf-hero">Hero Image</div>
   <div class="wf-part">Match 1</div>
   <div class="wf-part">Match 2</div>
   <div class="wf-part">News</div>

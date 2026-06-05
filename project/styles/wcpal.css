@@ -46,8 +46,8 @@ table, th, td {
 }
 
 th {
-  background-color: #000000;                     /* black */
-  color: #d4af37;                                /* gold */
+  background-color: #000000;                     
+  color: #d4af37;                                
   padding: 8px;
 }
 
@@ -56,13 +56,13 @@ td {
 }
 
 .color1 {
-  background-color: #000000;                     /* black swatch */
+  background-color: #000000;                    
   color: #ffffff;
   padding: 10px;
 }
 
 .color2 {
-  background-color: #d4af37;                     /* gold swatch */
+  background-color: #d4af37;                     
   color: #000000;
   padding: 10px;
 }
@@ -90,7 +90,35 @@ footer {
   margin-top: 30px;
   text-align: center;
   color: #000000;
-  border-top: 3px solid #d4af37;                 /* gold accent */
+  border-top: 3px solid #d4af37;                
   font-size: 12px;
   padding-top: 10px;
+}
+
+.spec-georgia {
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+.spec-arial {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.desktop {
+  width: 500px;
+}
+
+.wf-row {
+  display: flex;
+}
+
+.wf-hero {
+  padding: 30px;
+}
+
+.col {
+  flex: 1;
+}
+.col-wide {
+  flex: 2;
 }

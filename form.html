@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review | Sam Tuala</title>
+    <meta name="description"
+        content="Submit a product review for our latest gear. Share your experience and help others choose the right product.">
+    <meta name="author" content="Sam Tuala">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" class="review-form">
+
+            <!-- Product Name -->
+            <label for="product">Product Name</label>
+            <select id="product" name="product" required>
+                <option disabled selected value="">Select a Product ...</option>
+                <!-- Options populated dynamically by form.js -->
+            </select>
+
+            <!-- Overall Rating -->
+            <fieldset class="rating-group">
+                <legend>Overall Rating</legend>
+                <label class="rating-label">
+                    <input type="radio" name="rating" value="1" required>
+                    <span>★</span>
+                </label>
+                <label class="rating-label">
+                    <input type="radio" name="rating" value="2">
+                    <span>★★</span>
+                </label>
+                <label class="rating-label">
+                    <input type="radio" name="rating" value="3">
+                    <span>★★★</span>
+                </label>
+                <label class="rating-label">
+                    <input type="radio" name="rating" value="4">
+                    <span>★★★★</span>
+                </label>
+                <label class="rating-label">
+                    <input type="radio" name="rating" value="5">
+                    <span>★★★★★</span>
+                </label>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <label for="install-date">Date of Installation</label>
+            <input type="date" id="install-date" name="install-date" required>
+
+            <!-- Useful Features -->
+            <fieldset class="checkbox-group">
+                <legend>Which features did you find useful in the product?
+                    <span class="hint">(Check all that apply)</span>
+                </legend>
+                <label>
+                    <input type="checkbox" name="features" value="durability">
+                    Durability
+                </label>
+                <label>
+                    <input type="checkbox" name="features" value="ease-of-use">
+                    Ease of Use
+                </label>
+                <label>
+                    <input type="checkbox" name="features" value="performance">
+                    Performance
+                </label>
+                <label>
+                    <input type="checkbox" name="features" value="design">
+                    Design
+                </label>
+            </fieldset>
+
+            <!-- Written Review -->
+            <label for="review">Written Review <span class="optional">(Optional)</span></label>
+            <textarea id="review" name="review" rows="5"></textarea>
+
+            <!-- User Name -->
+            <label for="user-name">Your Name <span class="optional">(Optional)</span></label>
+            <input type="text" id="user-name" name="user-name">
+
+           
+            <button type="submit" class="submit-btn">Post Review</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Sam Tuala &nbsp;|&nbsp; NV, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

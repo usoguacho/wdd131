@@ -28,30 +28,29 @@
             <label for="product">Product Name</label>
             <select id="product" name="product" required>
                 <option disabled selected value="">Select a Product ...</option>
-                <!-- Options populated dynamically by form.js -->
             </select>
 
             <!-- Overall Rating -->
             <fieldset class="rating-group">
                 <legend>Overall Rating</legend>
-                <label class="rating-label">
-                    <input type="radio" name="rating" value="1" required>
+                <label class="rating-label" for="rating-1">
+                    <input type="radio" id="rating-1" name="rating" value="1" required>
                     <span>★</span>
                 </label>
-                <label class="rating-label">
-                    <input type="radio" name="rating" value="2">
+                <label class="rating-label" for="rating-2">
+                    <input type="radio" id="rating-2" name="rating" value="2" required>
                     <span>★★</span>
                 </label>
-                <label class="rating-label">
-                    <input type="radio" name="rating" value="3">
+                <label class="rating-label" for="rating-3">
+                    <input type="radio" id="rating-3" name="rating" value="3" required>
                     <span>★★★</span>
                 </label>
-                <label class="rating-label">
-                    <input type="radio" name="rating" value="4">
+                <label class="rating-label" for="rating-4">
+                    <input type="radio" id="rating-4" name="rating" value="4" required>
                     <span>★★★★</span>
                 </label>
-                <label class="rating-label">
-                    <input type="radio" name="rating" value="5">
+                <label class="rating-label" for="rating-5">
+                    <input type="radio" id="rating-5" name="rating" value="5" required>
                     <span>★★★★★</span>
                 </label>
             </fieldset>
@@ -60,25 +59,24 @@
             <label for="install-date">Date of Installation</label>
             <input type="date" id="install-date" name="install-date" required>
 
-            <!-- Useful Features -->
             <fieldset class="checkbox-group">
                 <legend>Which features did you find useful in the product?
                     <span class="hint">(Check all that apply)</span>
                 </legend>
-                <label>
-                    <input type="checkbox" name="features" value="durability">
+                <label for="feat-durability">
+                    <input type="checkbox" id="feat-durability" name="features" value="durability">
                     Durability
                 </label>
-                <label>
-                    <input type="checkbox" name="features" value="ease-of-use">
+                <label for="feat-ease">
+                    <input type="checkbox" id="feat-ease" name="features" value="ease-of-use">
                     Ease of Use
                 </label>
-                <label>
-                    <input type="checkbox" name="features" value="performance">
+                <label for="feat-performance">
+                    <input type="checkbox" id="feat-performance" name="features" value="performance">
                     Performance
                 </label>
-                <label>
-                    <input type="checkbox" name="features" value="design">
+                <label for="feat-design">
+                    <input type="checkbox" id="feat-design" name="features" value="design">
                     Design
                 </label>
             </fieldset>
@@ -91,7 +89,7 @@
             <label for="user-name">Your Name <span class="optional">(Optional)</span></label>
             <input type="text" id="user-name" name="user-name">
 
-           
+            <!-- Submit -->
             <button type="submit" class="submit-btn">Post Review</button>
 
         </form>

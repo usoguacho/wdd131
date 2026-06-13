@@ -27,7 +27,6 @@ function saveFavorites(list) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
 }
 
-// Build the HTML for a single team card using a template literal
 function buildTeamCard(team, favorites) {
   const isFav = favorites.includes(team.name);
   const favClass = isFav ? "fav-btn is-fav" : "fav-btn";
@@ -43,7 +42,7 @@ function buildTeamCard(team, favorites) {
     </article>`;
 }
 
-// Filter the team list and redraw the grid
+// team list and redraw the grid
 function renderTeams() {
   const grid = document.querySelector("#team-grid");
   const count = document.querySelector("#result-count");
@@ -57,7 +56,6 @@ function renderTeams() {
     return matchesConf && matchesSearch;
   });
 
-  // Conditional branching for the empty state
   if (filtered.length === 0) {
     grid.innerHTML = `<p>No teams match your filters. Try a different search.</p>`;
   } else {

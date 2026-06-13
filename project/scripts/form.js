@@ -1,5 +1,3 @@
-
-
 const SIGNUP_KEY = "wcpal-signup-count";
 
 // definition list summarizing the submitted values

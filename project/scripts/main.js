@@ -3,7 +3,7 @@ function toggleNav() {
   const button = document.querySelector("#nav-toggle");
   const isOpen = menu.classList.toggle("open");
 
-  // Conditional branching keeps the button label and ARIA state in sync.
+  // keep the button label and ARIA state in sync.
   if (isOpen) {
     button.setAttribute("aria-expanded", "true");
     button.textContent = "\u2715"; // ✕
@@ -13,7 +13,7 @@ function toggleNav() {
   }
 }
 
-// Place the current year in the footer.
+// Place the current year in the footer
 function setFooterYear() {
   const yearSpan = document.querySelector("#year");
   if (yearSpan) {

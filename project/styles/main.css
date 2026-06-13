@@ -1,0 +1,486 @@
+/* ==========================================================================
+   World Cup Pal - Main Stylesheet
+   Color schema: Black #000000, Gold #d4af37, White #ffffff (+ neutral grays)
+   Fonts: Georgia (headings), Arial (body)
+   Mobile-first with breakpoints for landscape and larger screens.
+   ========================================================================== */
+
+:root {
+  --black: #000000;
+  --dark: #1a1a1a;
+  --gold: #d4af37;
+  --gold-dark: #b9962b;
+  --white: #ffffff;
+  --light: #f4f4f4;
+  --gray: #555555;
+  --border: #dddddd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.1rem; }
+
+p { margin-bottom: 1em; }
+
+a { color: var(--gold-dark); }
+
+img { max-width: 100%; display: block; }
+
+/* Accessibility: skip link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--gold);
+  color: var(--black);
+  padding: 0.5em 1em;
+  z-index: 200;
+}
+.skip-link:focus { left: 0; }
+
+/* Layout helper */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== Header & Navigation ===== */
+.site-header {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75em 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand img { width: 36px; height: 36px; }
+
+.nav-toggle {
+  background: none;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-size: 1.2rem;
+  padding: 0.2em 0.6em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.main-nav { width: 100%; }
+
+.nav-menu {
+  list-style: none;
+  width: 100%;
+  display: none;
+}
+
+.nav-menu.open { display: block; }
+
+.nav-menu li { border-top: 1px solid var(--dark); }
+
+.nav-menu a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.7em 0.2em;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--gold);
+}
+
+/* ===== Hero ===== */
+.hero {
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 2em 0;
+}
+
+.hero h1 { color: var(--gold); }
+
+.countdown {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5em 0 1em;
+  color: var(--gold);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--black);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.7em 1.4em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover { background-color: var(--gold-dark); }
+
+/* ===== Generic content sections ===== */
+.section { padding: 2em 0; }
+
+.section h2 {
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 0.2em;
+}
+
+/* ===== Card grid (home features, venues) ===== */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2em;
+  margin-top: 1em;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.card img { width: 100%; }
+
+.card-body { padding: 1em; }
+
+.card h3 { color: var(--black); }
+
+/* ===== Groups grid (home) ===== */
+.group-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.group-card {
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--gold);
+  border-radius: 6px;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.group-head { padding: 1em; }
+
+.group-letter {
+  display: block;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--black);
+  margin-bottom: 0.5em;
+}
+
+.group-teams { list-style: none; }
+
+.group-teams li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.2em 0;
+}
+
+.group-teams img {
+  width: 30px;
+  height: 20px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.hint {
+  display: block;
+  color: var(--gray);
+  font-size: 0.8rem;
+  margin-top: 0.6em;
+}
+
+.matchups-toggle {
+  width: 100%;
+  background-color: var(--black);
+  color: var(--gold);
+  border: none;
+  padding: 0.6em;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.matchups-toggle:hover { background-color: var(--dark); }
+
+.group-matchups {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: var(--light);
+}
+
+.group-card:hover .group-matchups,
+.group-card:focus-within .group-matchups,
+.group-card.open .group-matchups {
+  max-height: 420px;
+}
+
+.group-matchups h3 {
+  color: var(--black);
+  padding: 0.8em 1em 0;
+}
+
+.group-matchups ul {
+  list-style: none;
+  padding: 0 1em 1em;
+}
+
+.group-matchups li {
+  padding: 0.3em 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.group-matchups li:last-child { border-bottom: none; }
+
+/* ===== Teams page ===== */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: flex-end;
+  margin: 1em 0;
+}
+
+.control-group { display: flex; flex-direction: column; }
+
+.control-group label { font-weight: bold; margin-bottom: 0.3em; }
+
+.controls select,
+.controls input {
+  padding: 0.5em;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.result-count { color: var(--gray); margin: 0.5em 0; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.team-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1em;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.team-card img {
+  width: 60px;
+  height: 40px;
+  margin: 0 auto 0.5em;
+  border: 1px solid var(--border);
+}
+
+.team-card h3 { color: var(--black); margin-bottom: 0.2em; }
+
+.team-card .group-tag { color: var(--gray); font-size: 0.9rem; }
+
+.fav-btn {
+  margin-top: 0.6em;
+  background-color: var(--white);
+  border: 2px solid var(--gold);
+  color: var(--gold-dark);
+  border-radius: 4px;
+  padding: 0.4em 0.8em;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.fav-btn.is-fav {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+/* ===== Schedule table ===== */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.schedule-table caption {
+  text-align: left;
+  font-style: italic;
+  color: var(--gray);
+  margin-bottom: 0.5em;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid var(--border);
+  padding: 0.6em;
+  text-align: left;
+}
+
+.schedule-table th {
+  background-color: var(--black);
+  color: var(--gold);
+}
+
+.schedule-table tr:nth-child(even) td { background-color: var(--light); }
+
+/* ===== Form ===== */
+.form-card {
+  background-color: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.2em;
+  margin-top: 1em;
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+legend {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  padding: 0 0.4em;
+}
+
+.field { margin-bottom: 1em; }
+
+.field label { display: block; font-weight: bold; margin-bottom: 0.3em; }
+
+.field-legend {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.4em;
+}
+
+.form-actions { margin-top: 1em; }
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.6em;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.choice { font-weight: normal; display: flex; align-items: center; gap: 0.4em; }
+
+.required { color: #b22234; }
+
+/* ===== Confirmation panel ===== */
+.confirm-panel {
+  background-color: var(--light);
+  border-left: 5px solid var(--gold);
+  border-radius: 4px;
+  padding: 1.2em;
+  margin-top: 1em;
+}
+
+.confirm-panel dt { font-weight: bold; }
+.confirm-panel dd { margin: 0 0 0.6em; }
+
+/* ===== Footer ===== */
+.site-footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5em 0;
+  margin-top: 2em;
+}
+
+.site-footer a { color: var(--gold); }
+
+.site-footer .tagline { color: var(--gold); font-family: Georgia, serif; }
+
+/* ==========================================================================
+   Responsive: landscape phones and up
+   ========================================================================== */
+@media (min-width: 600px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.7rem; }
+
+  .nav-toggle { display: none; }
+
+  .main-nav { width: auto; }
+
+  .nav-menu {
+    display: flex;
+    width: auto;
+    gap: 0.5em;
+  }
+
+  .nav-menu li { border-top: none; }
+
+  .nav-menu a { padding: 0.4em 0.8em; }
+
+  .cards { grid-template-columns: 1fr 1fr; }
+
+  .group-grid { grid-template-columns: 1fr 1fr; }
+
+  .team-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+/* Larger screens */
+@media (min-width: 1000px) {
+  .cards { grid-template-columns: 1fr 1fr 1fr; }
+
+  .group-grid { grid-template-columns: 1fr 1fr 1fr; }
+
+  .team-grid { grid-template-columns: repeat(4, 1fr); }
+
+  .hero { padding: 3em 0; }
+}

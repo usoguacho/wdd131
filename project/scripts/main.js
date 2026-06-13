@@ -1,9 +1,3 @@
-// ==========================================================================
-// World Cup Pal - shared scripts (runs on every page)
-// Handles the responsive navigation toggle and the footer year.
-// ==========================================================================
-
-// Show or hide the mobile navigation menu.
 function toggleNav() {
   const menu = document.querySelector("#nav-menu");
   const button = document.querySelector("#nav-toggle");

@@ -1,10 +1,3 @@
-/* ==========================================================================
-   World Cup Pal - Main Stylesheet
-   Color schema: Black #000000, Gold #d4af37, White #ffffff (+ neutral grays)
-   Fonts: Georgia (headings), Arial (body)
-   Mobile-first with breakpoints for landscape and larger screens.
-   ========================================================================== */
-
 :root {
   --black: #000000;
   --dark: #1a1a1a;
@@ -64,7 +57,7 @@ img { max-width: 100%; display: block; }
   margin: 0 auto;
 }
 
-/* ===== Header & Navigation ===== */
+/* Header & Navigation  */
 .site-header {
   background-color: var(--black);
   color: var(--white);
@@ -125,7 +118,7 @@ img { max-width: 100%; display: block; }
   color: var(--gold);
 }
 
-/* ===== Hero ===== */
+/* Hero */
 .hero {
   background-color: var(--dark);
   color: var(--white);
@@ -142,7 +135,7 @@ img { max-width: 100%; display: block; }
   color: var(--gold);
 }
 
-/* ===== Buttons ===== */
+/* Buttons  */
 .btn {
   display: inline-block;
   background-color: var(--gold);
@@ -158,7 +151,7 @@ img { max-width: 100%; display: block; }
 
 .btn:hover { background-color: var(--gold-dark); }
 
-/* ===== Generic content sections ===== */
+/* Generic content sections */
 .section { padding: 2em 0; }
 
 .section h2 {
@@ -166,7 +159,7 @@ img { max-width: 100%; display: block; }
   padding-bottom: 0.2em;
 }
 
-/* ===== Card grid (home features, venues) ===== */
+/* Card grid  */
 .cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -187,7 +180,7 @@ img { max-width: 100%; display: block; }
 
 .card h3 { color: var(--black); }
 
-/* ===== Groups grid (home) ===== */
+/* Groups grid */
 .group-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -280,7 +273,7 @@ img { max-width: 100%; display: block; }
 
 .group-matchups li:last-child { border-bottom: none; }
 
-/* ===== Teams page ===== */
+/*  Teams page */
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -344,7 +337,7 @@ img { max-width: 100%; display: block; }
   color: var(--black);
 }
 
-/* ===== Schedule table ===== */
+/* Schedule table  */
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
@@ -372,7 +365,7 @@ img { max-width: 100%; display: block; }
 
 .schedule-table tr:nth-child(even) td { background-color: var(--light); }
 
-/* ===== Form ===== */
+/*  Form */
 .form-card {
   background-color: var(--light);
   border: 1px solid var(--border);
@@ -421,7 +414,7 @@ legend {
 
 .required { color: #b22234; }
 
-/* ===== Confirmation panel ===== */
+/* Confirmation panel */
 .confirm-panel {
   background-color: var(--light);
   border-left: 5px solid var(--gold);
@@ -433,7 +426,7 @@ legend {
 .confirm-panel dt { font-weight: bold; }
 .confirm-panel dd { margin: 0 0 0.6em; }
 
-/* ===== Footer ===== */
+/* Footer */
 .site-footer {
   background-color: var(--black);
   color: var(--white);
@@ -446,9 +439,7 @@ legend {
 
 .site-footer .tagline { color: var(--gold); font-family: Georgia, serif; }
 
-/* ==========================================================================
-   Responsive: landscape phones and up
-   ========================================================================== */
+/*  phones */
 @media (min-width: 600px) {
   h1 { font-size: 2.2rem; }
   h2 { font-size: 1.7rem; }
@@ -474,7 +465,7 @@ legend {
   .team-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
-/* Larger screens */
+/* Large screen */
 @media (min-width: 1000px) {
   .cards { grid-template-columns: 1fr 1fr 1fr; }
 

@@ -1,6 +1,4 @@
-
-
-// Build the countdown string based on the time remaining.
+// Build the countdown string based on the time remaining
 function getCountdownText() {
   const kickoff = new Date("2026-06-11T15:00:00-06:00");
   const now = new Date();
@@ -19,7 +17,7 @@ function getCountdownText() {
   return `${days} days, ${hours} hours, and ${minutes} minutes until kickoff!`;
 }
 
-// Update the countdown element on the page.
+// Update the countdown element on the page
 function updateCountdown() {
   const el = document.querySelector("#countdown");
   if (el) {

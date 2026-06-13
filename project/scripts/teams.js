@@ -1,9 +1,3 @@
-// ==========================================================================
-// World Cup Pal - Teams page
-// Renders team cards from an array of objects, filters them by confederation
-// and search text, and lets visitors save favorites to localStorage.
-// ==========================================================================
-
 const teams = [
   { name: "Mexico", confederation: "CONCACAF", flag: "images/mexico.jpg", note: "Co-host nation; opens the tournament at Estadio Azteca." },
   { name: "United States", confederation: "CONCACAF", flag: "images/usax.jpg", note: "Co-host nation; opens against Paraguay in Los Angeles." },
@@ -19,7 +13,7 @@ const teams = [
 
 const STORAGE_KEY = "wcpal-favorites";
 
-// Read the saved favorites array from localStorage.
+// Read the saved favorites array from localStorage
 function getFavorites() {
   const stored = localStorage.getItem(STORAGE_KEY);
   if (stored) {
@@ -28,12 +22,12 @@ function getFavorites() {
   return [];
 }
 
-// Save the favorites array to localStorage.
+// Save the favorites array to localStorage
 function saveFavorites(list) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
 }
 
-// Build the HTML for a single team card using a template literal.
+// Build the HTML for a single team card using a template literal
 function buildTeamCard(team, favorites) {
   const isFav = favorites.includes(team.name);
   const favClass = isFav ? "fav-btn is-fav" : "fav-btn";
@@ -49,7 +43,7 @@ function buildTeamCard(team, favorites) {
     </article>`;
 }
 
-// Filter the team list and redraw the grid.
+// Filter the team list and redraw the grid
 function renderTeams() {
   const grid = document.querySelector("#team-grid");
   const count = document.querySelector("#result-count");
@@ -63,7 +57,7 @@ function renderTeams() {
     return matchesConf && matchesSearch;
   });
 
-  // Conditional branching for the empty state.
+  // Conditional branching for the empty state
   if (filtered.length === 0) {
     grid.innerHTML = `<p>No teams match your filters. Try a different search.</p>`;
   } else {
@@ -78,7 +72,7 @@ function renderTeams() {
   attachFavButtons();
 }
 
-// Attach click handlers to every Save button currently on the page.
+// click handlers to every Save button currently on the page
 function attachFavButtons() {
   const buttons = document.querySelectorAll(".fav-btn");
   buttons.forEach(function (button) {
@@ -86,7 +80,7 @@ function attachFavButtons() {
   });
 }
 
-// Toggle a team in and out of the favorites list.
+// Toggle a team in and out of the favorites list
 function handleFavClick(event) {
   const name = event.target.dataset.team;
   let favorites = getFavorites();
